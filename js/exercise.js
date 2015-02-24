@@ -11,6 +11,9 @@
  */
 
    var myArray = [];
+   for(var i = 1; i < 11; i++){
+   	myArray.push(i); 
+   }
 
 /**
  * Question 2
@@ -21,6 +24,12 @@
 var sub = 100;
 var start = 1;
 
+while(start < 11) {
+	sub = sub - start;
+	console.log(sub);
+	console.log(start);
+	start++;
+}
 
 /**
  * Question 3
@@ -31,6 +40,12 @@ var start = 1;
 var someNums = [3, 1, 88, -1, 33, 96, 35, 12, 72];
 var largest_num = someNums[0];
 
+for(var i=0; i<someNums.length; i++) {
+	if (someNums[i] > largest_num) {
+		largest_num = someNums[i];
+	}
+}
+
 
 /**
  * Question 4
@@ -39,6 +54,11 @@ var largest_num = someNums[0];
  */
 
 var small = someNums[0];
+for(var i=0; i<someNums.length; i++) {
+	if (someNums[i] < small) {
+		small = someNums[i];
+	}
+}
 
 /**
  * Question 5
@@ -51,6 +71,14 @@ var firstArray = ['peaches', 'apples', 'pears', 'oranges', 'plums', 'water melon
 var secondArray = ['blueberries', 'water melon', 'tomatoes', 'apples', 'plums', 'oranges', 'cantaloupe'];
 var totalDuplicates = 0;
 
+for(i=0; i<firstArray.length; i++) {
+	for(j=0; j<secondArray.length; j++) {
+		if (firstArray[i]== secondArray[j]) {
+			totalDuplicates++;
+		}
+	}
+}
+
 /**
  * Question 6 
  * Count the number of unique elements are in the array. In other words, in the 
@@ -61,4 +89,23 @@ var totalDuplicates = 0;
 
 var numbers = [3, 7, 1, 3, 23, 7, 98, 26, 1];
 var totalUniques = 0;
+var found = [];
+
+// numbers.sort();
+for (i = 0; i < numbers.length; i++) {
+	if(found.indexOf(numbers[i]) == -1) {
+		found.push(numbers[i])
+	}
+
+}
+console.log(found.length)
+totalUniques = found.length;
+
+	// for(j=0; j< numbers.length; j++){
+	// 	if(numbers[i]==numbers[j]) {
+	// 		found = true;
+	// 		break;
+	// 	}
+	// 	if (!found) {totalUniques++}
+
 
