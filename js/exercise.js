@@ -87,7 +87,7 @@ for(i=0; i<firstArray.length; i++) {
  * Hint: you'll need multiple for loops.
  */
 
-var numbers = [3, 7, 1, 3, 23, 7, 98, 26, 1];
+var numbers = [3, 7, 1, 3, 23, 7, 98, 26, 1, 3];
 var totalUniques = 0;
 var found = [];
 
